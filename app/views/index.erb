@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="visible-md-inline-block visible-lg-inline-block">
+  <% @surveys.each_slice(3) do |group| %>
+    <div class="row equal">
+      <% group.each do |s|%>
+        <div class="col-md-4">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%=s.title%></h3>
+            </div>
+            <div class="panel-body">
+              <ul class="s-info">
+                <li><span class="glyphicon glyphicon-user" aria-hidden="true"> <%= s.user.name %></span></li>
+                <li><span class="glyphicon glyphicon-time" aria-hidden="true"> <%= s.created_at.utc %></span></li>
+              </ul>
+              <%=s.about%>
+            </div>
+          </div>
+        </div> <!-- end col-md-4 -->
+      <% end %>
+    </div> <!-- end row -->
+  <% end %>
+  </div>
+
+  <div class="visible-sm-inline-block">
+  <% @surveys.each_slice(2) do |group| %>
+    <div class="row equal">
+      <% group.each do |s|%>
+        <div class="col-sm-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%=s.title%></h3>
+            </div>
+            <div class="panel-body">
+              <%=s.about%>
+            </div>
+          </div>
+        </div> <!-- end col-md-4 -->
+      <% end %>
+    </div> <!-- end row -->
+  <% end %>
+  </div>
+
+  <div class="visible-xs-inline-block">
+  <% @surveys.each do |s| %>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%=s.title%></h3>
+          </div>
+          <div class="panel-body">
+            <%=s.about%>
+          </div>
+        </div>
+      </div> <!-- end col-xs-12 -->
+    </div> <!-- end row -->
+  <% end %>
+  </div>
+</div><!-- end container -->

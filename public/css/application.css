@@ -1,0 +1,26 @@
+.equal, .equal > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+
+.s-info {
+  list-style-type: none;
+  color: #777777;
+  font-size: 7pt;
+}
+
+.single_question {
+  padding: 24px;
+  margin-bottom: 16px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #AAAAAA;
+}
+
+.page-header {
+  margin-top: 0px;
+}

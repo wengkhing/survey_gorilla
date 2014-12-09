@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="page-header col-md-12">
+      <h1>Create New Survey <small>for baboons</small></h1>
+    </div>
+  </div>
+  <div class="row">
+    <form action="/survey/create" method="post">
+      <div id="survey_header" class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <input type="text" class="form-control" name="survey[title]" placeholder="Title" autofocus="">
+          <textarea class="form-control" name="survey[about]" rows="4" placeholder="Describe your survey here"></textarea>
+        </div>
+      </div> <!-- end survey header-->
+
+      <br><br>
+
+      <div class="row">
+        <div id="questions_wrapper" class="col-md-8 col-md-offset-1">
+          <div class="single_question">
+            <div class="input-group">
+              <input type="text" class="form-control" name="question1" placeholder="Question 1">
+              <span class="input-group-btn">
+                <button class="add_answer btn btn-default" type="button" data-id="1"><span class="glyphicon glyphicon-plus"></span></button>
+            </div>
+
+            <div id="answers_wrapper1">
+              <div>
+                <div class="input-group col-md-8">
+                  <input type="text" class="form-control" name="q1_a1"placeholder="Answer">
+                  <span class="input-group-btn">
+                    <button class="remove_answer btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+                  </span>
+                </div>
+              </div>
+            </div>  <!-- end answers_wrapper-->
+          </div> <!-- end q1_wrapper-->
+        </div> <!-- end questions_wrapper-->
+        <div class="col-md-2">
+          <button id="add_question" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"> Add question</span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
